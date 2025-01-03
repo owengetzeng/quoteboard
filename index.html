@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .quote {
+            font-size: 1.5em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quote" id="quote">Click the button to see a quote!</div>
+        <button onclick="showQuote()">Show Another Quote</button>
+    </div>
+
+    <script>
+        // Array of quotes
+        const quotes = [
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Success is not the key to happiness. Happiness is the key to success. - Albert Schweitzer",
+            "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
+            "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
+            "Your time is limited, so don’t waste it living someone else’s life. - Steve Jobs"
+        ];
+
+        // Function to display a random quote
+        function showQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
