@@ -1,1 +1,1 @@
-# quoteboard
+ChatGPT made this
